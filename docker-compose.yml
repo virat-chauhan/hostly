@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: hostly
+      POSTGRES_PASSWORD: hostly
+      POSTGRES_DB: hostly
+    ports:
+      - '5432:5432'
+    volumes:
+      - hostly_pg:/var/lib/postgresql/data
+volumes:
+  hostly_pg:
